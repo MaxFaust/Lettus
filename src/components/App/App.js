@@ -9,8 +9,10 @@ import Layout, {
   getCollapseBtn,
   getContent,
   getFooter } from "@mui-treasury/layout";
-import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import AppBar from '@material-ui/core/AppBar';
+
+import Toolbar from "@material-ui/core/Toolbar";
 
 
 const Header = getHeader(styled)
@@ -52,15 +54,15 @@ const App = () => {
   return (
     <Root scheme={scheme}>
       <CssBaseline />
-      <Header>
+      <AppBar position="static">
         <Toolbar>
-          <SidebarTrigger sidebarId="unique_id" />
-          Header
+    
         </Toolbar>
-      </Header>
+      </AppBar>
       <DrawerSidebar sidebarId="unique_id">
         <CollapseBtn />
         <SidebarContent>
+         
         </SidebarContent>
       </DrawerSidebar>
       <Content>Content</Content>
