@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components"; // or import styled from '@emotion/styled'
 import Layout, {
   Root,
@@ -12,8 +12,7 @@ import Layout, {
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from '@material-ui/core/AppBar';
 
-import Toolbar from "@material-ui/core/Toolbar";
-
+import Appbar from '../Appbar/Appbar';
 
 const Header = getHeader(styled)
 const DrawerSidebar = getDrawerSidebar(styled)
@@ -50,14 +49,13 @@ scheme.configureEdgeSidebar((builder) => {
     });
 });
 
-const App = () => {
-  return (
+class App extends Component {
+  render() {
+    return (
     <Root scheme={scheme}>
       <CssBaseline />
       <AppBar position="static">
-        <Toolbar>
-    
-        </Toolbar>
+          <Appbar/>
       </AppBar>
       <DrawerSidebar sidebarId="unique_id">
         <CollapseBtn />
@@ -70,5 +68,5 @@ const App = () => {
     </Root>
   );
 };
-
+};
 export default App;
