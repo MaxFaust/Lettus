@@ -10,14 +10,14 @@ import Layout, {
   getContent,
   getFooter } from "@mui-treasury/layout";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from '@material-ui/core/AppBar';
 
-import Appbar from '../Appbar/Appbar';
+import Nav from '../Nav/Nav';
+
 
 const Header = getHeader(styled)
 const DrawerSidebar = getDrawerSidebar(styled)
 const SidebarTrigger = getSidebarTrigger(styled)
-const SidebarContent = getSidebarContent(styled)
+// const SidebarContent = getSidebarContent(styled)
 const CollapseBtn = getCollapseBtn(styled)
 const Content = getContent(styled)
 const Footer = getFooter(styled)
@@ -54,17 +54,7 @@ class App extends Component {
     return (
     <Root scheme={scheme}>
       <CssBaseline />
-      <AppBar position="static">
-          <Appbar/>
-      </AppBar>
-      <DrawerSidebar sidebarId="unique_id">
-        <CollapseBtn />
-        <SidebarContent>
-         
-        </SidebarContent>
-      </DrawerSidebar>
-      <Content>Content</Content>
-      <Footer>Footer</Footer>
+      <Nav/>
     </Root>
   );
 };
