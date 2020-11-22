@@ -83,8 +83,7 @@ function ResponsiveDrawer(props) {
   ];
 
   const drawer = (
-    <div>
-      <div className={classes.toolbar} />
+    <div className={classes.container}>
       <List>
         {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
@@ -104,7 +103,6 @@ function ResponsiveDrawer(props) {
 
   return (
     <div className={classes.root}>
-
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
